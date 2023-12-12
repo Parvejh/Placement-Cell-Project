@@ -1,8 +1,9 @@
 const express = require("express");
+require('dotenv').config();
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const app = express();
-require('dotenv').config();
+
 const { PORT, MONGODB_URL, SESSION_SECRET_KEY } = process.env;
 const expressLayouts = require("express-ejs-layouts");
 const db = require('./config/mongoose')
